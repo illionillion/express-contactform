@@ -8,7 +8,7 @@ router.get("/", function (req, res, next) {
 });
 
 //データベースオブジェクトの取得
-const db = new sqlite3.Database("contact_form");
+const db = new sqlite3.Database("contact_form.sqlite3");
 
 router.get("/list", function (req, res, next) {
   db.serialize(() => {
