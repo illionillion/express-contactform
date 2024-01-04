@@ -19,15 +19,21 @@
                 </tr>
             </thead>
             <tbody>
-                <% content.forEach(function (value, key) { %>
+                <% if (content.length === 0) { %>
                     <tr>
-                        <td><%= value["user_id"] %></td>
-                        <td><%= value["user_name"] %></td>
-                        <td><%= value["user_email"] %></td>
-                        <td><%= value["content"] %></td>
-                        <td><%= value["date"] %></td>
+                        <td colspan="5">No data</td>
                     </tr>
-                <% }); %>
+                <% } else { %>
+                    <% content.forEach(function (value, key) { %>
+                        <tr>
+                            <td><%= value["user_id"] %></td>
+                            <td><%= value["user_name"] %></td>
+                            <td><%= value["user_email"] %></td>
+                            <td><%= value["content"] %></td>
+                            <td><%= value["date"] %></td>
+                        </tr>
+                    <% }); %>
+                <% } %>
             </tbody>
         </table>
         <a href="/">Back to Top Page.</a>
