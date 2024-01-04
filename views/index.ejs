@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <main>
+      <h1><%= title %></h1>
+      <section>
+        <form class="contactform" action="/send" method="post">
+          <section>
+            <label for="username">user name</label>
+            <input class="form-content" type="text" name="username" id="username" placeholder="Enter your name" required>
+          </section>
+          <section>
+            <label for="useremail">user email</label>
+            <input class="form-content" type="text" name="useremail" id="useremail" placeholder="Enter your email" required>
+          </section>
+          <section>
+            <label for="usercontent">content</label>
+            <textarea class="form-content" name="usercontent" id="usercontent" placeholder="Enter your content" required></textarea>
+          </section>
+          <section>
+            <input type="submit" value="send">
+          </section>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: auto;
+  width: 100vw;
+  max-width: 600px;
+}
+
+main h1 {
+  text-align: center;
+  padding-block: 1.5rem;
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactform section {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 1rem;
+}
+.contactform section:has(input[type="submit"]) {
+  align-items: end;
+}
+
+.contactform section .form-content {
+  padding-block: 0.2rem;
+  padding-inline: 0.5rem;
+  resize: vertical;
+}
+.contactform section input[type="submit"] {
+  width: 20%;
+  font-size: 1.2rem;
+}

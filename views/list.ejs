@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <main>
+        <h1>Content List</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>user name</th>
+                    <th>user email</th>
+                    <th>user content</th>
+                    <th>date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% content.forEach(function (value, key) { %>
+                    <tr>
+                        <td><%= value["user_id"] %></td>
+                        <td><%= value["user_name"] %></td>
+                        <td><%= value["user_email"] %></td>
+                        <td><%= value["content"] %></td>
+                        <td><%= value["date"] %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a href="/">Back to Top Page.</a>
+    </main>
+</body>
+</html>
