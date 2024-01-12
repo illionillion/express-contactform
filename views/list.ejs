@@ -16,6 +16,9 @@
                     <th>user email</th>
                     <th>user content</th>
                     <th>date</th>
+                    <% if (content.length !== 0) { %>
+                        <th></th>
+                    <% } %>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +34,12 @@
                             <td><%= value["user_email"] %></td>
                             <td><%= value["content"] %></td>
                             <td><%= value["date"] %></td>
+                            <td>
+                                <form action="/delete" method="post">
+                                    <input type="hidden" name="id" value="<%= value['user_id'] %>">
+                                    <input type="submit" value="削除">
+                                </form>
+                            </td>
                         </tr>
                     <% }); %>
                 <% } %>

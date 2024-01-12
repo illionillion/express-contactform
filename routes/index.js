@@ -43,4 +43,16 @@ router.post("/send", function (req, res, next) {
   res.render("result", { result: "Seccess!!" });
 });
 
+router.post("/delete", function (req, res, next) {
+  const { id } = req.body;
+
+  //SQL文, DataBaseのレコード作成
+  db.run(
+    "delete from users where user_id = ?",
+    id
+  );
+  //res.redirect() 引数に指定したアドレスにリダイレクト
+  res.render("result", { result: "Seccess!!" });
+});
+
 module.exports = router;
